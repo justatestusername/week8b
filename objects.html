@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<ul id="people"></ul>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+var people = [
+	{name: "Sam", age: 1000000},
+	{name: "Bob", age: 13},
+	{name: "Lucy", age: 77}
+];
+
+
+for (var i = 0; i < people.length; i++) {
+	var person = people[i];
+	var li = $('<li>' + person.name + ' is ' + person.age + ' years old' + '</li>');
+	$('#people').append(li)
+}
+
+</script>
+</body>
+</html>

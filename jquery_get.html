@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello</title>
+</head>
+<body>
+	<div id="container"></div>
+
+	<button id="loadbye">Bye</button>
+	<button id="loadhi">Hi</button>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script>
+	$('#loadbye').on('click', loadBye);
+	function loadBye() {
+		$.get('/bye.html', dataLoaded);
+	}
+
+	function dataLoaded(response) {
+		console.log(response)
+		var el = $(response);
+		el.hide();
+		$('#container').append(el);
+		el.fadeIn();
+	}
+
+	</script>
+</body>
+</html>

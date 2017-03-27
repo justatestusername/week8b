@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello</title>
+</head>
+<body>
+	<div id="container"></div>
+
+	<a class="navlink" href="bye.html">Bye</a>
+	<a class="navlink" href="hello.html">Hi</a>
+	<a class="navlink" href="bye.html">Another link</a>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script>
+	$('.navlink').on('click', clickHandler);
+
+	function clickHandler(event) {
+		event.preventDefault();
+		var url = $(this).attr('href');
+		console.log('you clicked!', url);
+		$('#container').hide().load(url).fadeIn();
+	}
+	</script>
+</body>
+</html>

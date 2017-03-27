@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hello</title>
+	<style>
+	h1 {color:red;}
+	</style>
+</head>
+<body>
+	<div id="container"></div>
+
+	<button id="loadbye">Bye</button>
+	<button id="loadhi">Hi</button>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script>
+	$('#loadbye').on('click', loadBye);
+	function loadBye() {
+		$('#container').load('/bye.html')
+	}
+
+	$('#loadhi').on('click', loadHi);
+	function loadHi() {
+		$('#container').load('/hello.html')
+	}
+	// setTimeout(loadExternalHTML, 2000);
+	// function loadExternalHTML(){
+	// 	$('#container').load('/bye.html')
+	// }
+	</script>
+</body>
+</html>
